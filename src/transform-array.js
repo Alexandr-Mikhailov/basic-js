@@ -9,6 +9,10 @@ module.exports = function transform(arr) {
             case '--discard-next':
                 if (i != arr.length - 1) {
                     i++;
+                } 
+                if (arr[i + 1] === '--discard-prev' || 
+                    arr[i + 1] === '--double-prev') {
+                    i++;
                 }
                 break;
             case '--discard-prev':
